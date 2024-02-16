@@ -7,6 +7,8 @@ class Constant
     private $gameName = "Racing Game";
     private $chooseMessage = "Dear %s, \n Please select one of Vehicles displayed in table abow";
     private $waitingMessage = "Race will be start soon, Joy it...";
+    private $endingRaceMessage = "The competition is over... the result of the competition:";
+    private $winnerMessage = "The winner of this match is the %s";
 
     public function getTableHeader(): array
     {
@@ -31,5 +33,10 @@ class Constant
     public function getWaitingMessage(): string
     {
         return $this->waitingMessage;
+    }
+
+    public function getWinnerMessage(): string
+    {
+        return $this->winnerMessage;
     }
 }
