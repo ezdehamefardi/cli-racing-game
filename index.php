@@ -1,6 +1,8 @@
 <?php
 
-require 'Utility.php';
+require 'Race.php';
 
-$utility = new Utility();
-$utility->initial();
+$race = new Race();
+$race->initial();
+$race->getPlayerInput('one');
+$race->getPlayerInput('two');

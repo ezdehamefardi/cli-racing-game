@@ -15,19 +15,21 @@ class CliBase
 
     public function simpleOutput(string $message, array $arguments = null): void
     {
-        if ($arguments) {
-            $arguments = implode(',', $arguments);
-            \cli\out($message, $arguments);
+        if ($arguments) {    
+            array_unshift($arguments, $message);
+            call_user_func_array("\cli\out", $arguments);        
+        } else {
+            \cli\out($message);
         }
-        \cli\out($message);
     }
 
     public function newlineOutput(string $message, array $arguments = null): void
     {
-        if ($arguments) {
-            $arguments = implode(',', $arguments);
-            \cli\line($message, $arguments);
+        if ($arguments) { 
+            array_unshift($arguments, $message);   
+            call_user_func_array("\cli\line", $arguments);
+        } else {
+            \cli\line($message);
         }
-        \cli\line($message);
     }
 }
