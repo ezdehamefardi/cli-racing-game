@@ -19,7 +19,24 @@ class Utility
 
     public function validateUserInput($choice): bool
     {
-        $choice = strtolower(trim($choice));
+        $choice = $this->formatUserInputs($choice);
         return $choice > 0 && $choice <= 10 ? true : false;
+    }
+
+    public function formatUserInputs($input)
+    {
+        return strtolower(trim($input));
+    }
+
+    public function timeCalculator($speed, $unit)
+    {
+        // convert all units to km/h
+       if ($unit != 'Km/h') {
+            $speed = $speed * 1.852;
+       }
+       
+       // the race length is 20KM
+       $minutesToFinish = (20 / $speed) * 60;
+       return number_format((float)$minutesToFinish, 3, '.', '');
     }
 }
