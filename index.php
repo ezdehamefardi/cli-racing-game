@@ -7,3 +7,4 @@ $race->initial();
 $race->getPlayerInput('one');
 $race->getPlayerInput('two');
 $race->startRacing();
+$race->scoreboard();

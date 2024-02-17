@@ -38,5 +38,5 @@ class Utility
        // the race length is 20KM
        $minutesToFinish = (20 / $speed) * 60;
        return number_format((float)$minutesToFinish, 3, '.', '');
-    }
+    }    
 }
