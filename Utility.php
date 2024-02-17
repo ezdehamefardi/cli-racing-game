@@ -23,12 +23,12 @@ class Utility
         return $choice > 0 && $choice <= 10 ? true : false;
     }
 
-    public function formatUserInputs($input)
+    public function formatUserInputs($input): string
     {
         return strtolower(trim($input));
     }
 
-    public function timeCalculator($speed, $unit)
+    public function timeCalculator($speed, $unit): float
     {
         // convert all units to km/h
        if ($unit != 'Km/h') {
