@@ -35,7 +35,7 @@ Welcome to Racing Game, a two-player racing game developed in PHP where players 
 2. Start the game:
 
    ```bash
-   php game.php
+   php index.php
    ```
 
 3. Follow the on-screen instructions to choose vehicles and start the race.
